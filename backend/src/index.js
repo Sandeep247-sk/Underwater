@@ -56,8 +56,14 @@ app.use((req, res) => {
   res.status(404).json({ error: 'Not found' });
 });
 
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-  console.log(`Network: 0.0.0.0:${PORT}`);
-  console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
-});
+// Export for Vercel
+export default app;
+
+// Only listen if run directly (not on Vercel)
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Network: 0.0.0.0:${PORT}`);
+    console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+  });
+}
