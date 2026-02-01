@@ -38,10 +38,19 @@ const frontendPath = join(__dirname, '../../frontend/public');
 app.use(express.static(frontendPath));
 
 // API routes
-app.use('/auth', authRoutes);
-app.use('/stations', stationRoutes);
-app.use('/ingest', ingestRoutes);
-app.use('/dashboard', dashboardRoutes);
+// API routes setup
+const apiRouter = express.Router();
+apiRouter.use('/auth', authRoutes);
+apiRouter.use('/stations', stationRoutes);
+apiRouter.use('/ingest', ingestRoutes);
+apiRouter.use('/dashboard', dashboardRoutes);
+apiRouter.get('/health', (req, res) => {
+  res.json({ status: 'ok', timestamp: new Date().toISOString() });
+});
+
+// Mount API on root AND /api (for Vercel rewrites)
+app.use('/', apiRouter);
+app.use('/api', apiRouter);
 
 // Health check
 app.get('/health', (req, res) => {

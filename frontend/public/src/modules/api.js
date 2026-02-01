@@ -1,7 +1,11 @@
 // API client module
 import { getToken, removeToken, removeRole } from './auth.js';
 
-const API_BASE = 'http://localhost:3001';
+// Dynamic API base: Use port 3001 if on localhost/LAN dev server (port 8080), 
+// otherwise use /api (relative) for Vercel/Production.
+const API_BASE = window.location.port === '8080' 
+    ? `${window.location.protocol}//${window.location.hostname}:3001`
+    : '/api';
 
 async function request(endpoint, options = {}) {
     const token = getToken();
