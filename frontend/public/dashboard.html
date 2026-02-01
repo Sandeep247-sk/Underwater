@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Groundwater Monitoring</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2>Groundwater Monitoring</h2>
+            <div class="nav-links">
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="map.html">Map</a>
+                <a href="#" id="logoutBtn">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <div class="container">
+            <h1>Dashboard</h1>
+            <div class="refresh-controls">
+                <label>
+                    Auto-refresh: 
+                    <select id="refreshInterval">
+                        <option value="300000">5 minutes</option>
+                        <option value="600000">10 minutes</option>
+                        <option value="900000">15 minutes</option>
+                        <option value="0">Manual</option>
+                    </select>
+                </label>
+                <button id="refreshBtn" class="btn btn-secondary">Refresh Now</button>
+            </div>
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <h3>Total Stations</h3>
+                    <div class="kpi-value" id="totalStations">--</div>
+                    <div class="kpi-unit">India (all states)</div>
+                    <canvas id="sparkline0" class="sparkline" aria-hidden="true"></canvas>
+                </div>
+                <div class="kpi-card">
+                    <h3>Average Groundwater Level</h3>
+                    <div class="kpi-value" id="avgLevel">--</div>
+                    <div class="kpi-unit">meters (30-day trend)</div>
+                    <canvas id="sparkline1" class="sparkline" aria-hidden="true"></canvas>
+                </div>
+                <div class="kpi-card kpi-card--normal">
+                    <h3>Normal</h3>
+                    <div class="kpi-value" id="normalCount">--</div>
+                    <div class="kpi-unit">stations</div>
+                    <canvas id="sparkline2" class="sparkline" aria-hidden="true"></canvas>
+                </div>
+                <div class="kpi-card kpi-card--warning">
+                    <h3>Warning</h3>
+                    <div class="kpi-value" id="warningCount">--</div>
+                    <div class="kpi-unit">stations</div>
+                    <canvas id="sparkline3" class="sparkline" aria-hidden="true"></canvas>
+                </div>
+                <div class="kpi-card kpi-card--critical">
+                    <h3>Critical</h3>
+                    <div class="kpi-value" id="criticalCount">--</div>
+                    <div class="kpi-unit">stations</div>
+                    <canvas id="sparkline4" class="sparkline" aria-hidden="true"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script type="module" src="src/modules/auth.js"></script>
+    <script type="module" src="src/modules/api.js"></script>
+    <script type="module" src="src/pages/dashboard.js"></script>
+</body>
+</html>

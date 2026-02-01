@@ -1,0 +1,15 @@
+{
+  "name": "groundwater-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for groundwater monitoring system",
+  "type": "module",
+  "scripts": {
+    "dev": "npx http-server public -p 8080 -c-1 --cors"
+  },
+  "keywords": ["groundwater", "monitoring", "frontend"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

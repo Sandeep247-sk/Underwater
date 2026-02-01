@@ -1,0 +1,21 @@
+{
+  "name": "Groundwater Monitoring System",
+  "short_name": "GW Monitor",
+  "description": "Real-time groundwater monitoring for India DWLR stations",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/assets/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/assets/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

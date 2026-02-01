@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station Detail - Groundwater Monitoring</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2>Groundwater Monitoring</h2>
+            <div class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="map.html">Map</a>
+                <a href="#" id="logoutBtn">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="map.html">← Back to Map</a>
+            </div>
+            <div id="stationInfo" class="station-info">
+                <h1 id="stationName">Loading...</h1>
+                <div class="station-meta">
+                    <span id="stationLocation"></span>
+                    <span id="stationStatus" class="status-badge"></span>
+                </div>
+            </div>
+            <div class="chart-container">
+                <h2>Water Level Time Series</h2>
+                <p id="chartDateRange" class="chart-date-range">Last 30 days</p>
+                <div class="chart-controls">
+                    <label>
+                        Interval:
+                        <select id="intervalSelect">
+                            <option value="daily">Daily</option>
+                            <option value="weekly">Weekly</option>
+                        </select>
+                    </label>
+                    <label>
+                        From:
+                        <input type="date" id="fromDate">
+                    </label>
+                    <label>
+                        To:
+                        <input type="date" id="toDate">
+                    </label>
+                    <button id="updateChart" class="btn btn-secondary">Update</button>
+                </div>
+                <div id="chartLoading" class="chart-loading" style="display: none;">Loading time series...</div>
+                <div class="chart-wrapper">
+                    <canvas id="timeseriesChart"></canvas>
+                </div>
+                <p id="chartEmpty" class="chart-empty" style="display: none;">No data for the selected range.</p>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h3>Current Level</h3>
+                    <div class="metric-value" id="currentLevel">--</div>
+                </div>
+                <div class="metric-card">
+                    <h3>Average Level</h3>
+                    <div class="metric-value" id="avgLevel">--</div>
+                </div>
+                <div class="metric-card">
+                    <h3>Min Level</h3>
+                    <div class="metric-value" id="minLevel">--</div>
+                </div>
+                <div class="metric-card">
+                    <h3>Max Level</h3>
+                    <div class="metric-value" id="maxLevel">--</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script type="module" src="src/modules/auth.js"></script>
+    <script type="module" src="src/modules/api.js"></script>
+    <script type="module" src="src/pages/station.js"></script>
+</body>
+</html>
