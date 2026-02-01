@@ -25,7 +25,7 @@ export function initializeDataStore() {
   users.set('admin', {
     id: '3',
     username: 'admin',
-    passwordHash: '$2a$10$rOzJqKqKqKqKqKqKqKqKqOqKqKqKqKqKqKqKqKqKqKqKqKqKqKqKq', // admin123
+    passwordHash: '$2a$10$9ptOu4GEJU1Rbm.aInVpg.p7wAHNV.5em2nM4Tiqe7BDuXTT4R1uK', // admin123
     role: 'Admin',
     regionRestrictions: null
   });
