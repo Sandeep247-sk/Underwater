@@ -25,9 +25,10 @@ router.post('/login', async (req, res, next) => {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
 
-    // For prototype, use simple password check
-    // In production, use bcrypt.compare(password, user.passwordHash)
-    const validPassword = password === `${username}123`;
+    // Verify password against hash
+    const bcrypt = await import('bcryptjs');
+    const validPassword = bcrypt.default.compareSync(password, user.passwordHash);
+    
     if (!validPassword) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
