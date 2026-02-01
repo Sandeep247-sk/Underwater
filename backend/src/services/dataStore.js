@@ -11,21 +11,21 @@ export function initializeDataStore() {
   users.set('researcher', {
     id: '1',
     username: 'researcher',
-    passwordHash: '$2a$10$rOzJqKqKqKqKqKqKqKqKqOqKqKqKqKqKqKqKqKqKqKqKqKqKqKqKq', // researcher123
+    passwordHash: '$2a$10$NVzAAJnHvf1.c3o3LL4C.uDZcpJgfY80XzgoMvlrMyuD6FyWYRyqi', // Password@123
     role: 'Researcher',
     regionRestrictions: null
   });
   users.set('planner', {
     id: '2',
     username: 'planner',
-    passwordHash: '$2a$10$rOzJqKqKqKqKqKqKqKqKqOqKqKqKqKqKqKqKqKqKqKqKqKqKqKqKq', // planner123
+    passwordHash: '$2a$10$NVzAAJnHvf1.c3o3LL4C.uDZcpJgfY80XzgoMvlrMyuD6FyWYRyqi', // Password@123
     role: 'Planner',
     regionRestrictions: null
   });
   users.set('admin', {
     id: '3',
     username: 'admin',
-    passwordHash: '$2a$10$ZNuBS3cMc7DDvOE32ktf1u/0dXWK5smAItmFNtqVybdcVtWIdsUAC',
+    passwordHash: '$2a$10$NVzAAJnHvf1.c3o3LL4C.uDZcpJgfY80XzgoMvlrMyuD6FyWYRyqi', // Password@123
     role: 'Admin',
     regionRestrictions: null
   });
