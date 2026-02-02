@@ -179,7 +179,8 @@ export function initializeDataStore() {
     { id: 'DWLR_TN_031', name: 'Dindigul - Natham Road', district: 'Dindigul', state: 'Tamil Nadu', lat: 10.3680, lon: 77.9803 },
     { id: 'DWLR_TN_032', name: 'Kanchipuram - Town', district: 'Kanchipuram', state: 'Tamil Nadu', lat: 12.8342, lon: 79.7036 },
     { id: 'DWLR_TN_033', name: 'Tiruppur - Kumaran Road', district: 'Tiruppur', state: 'Tamil Nadu', lat: 11.1085, lon: 77.3411 },
-    { id: 'DWLR_TN_034', name: 'Cuddalore - Town', district: 'Cuddalore', state: 'Tamil Nadu', lat: 11.7560, lon: 79.7543 }
+    { id: 'DWLR_TN_034', name: 'Cuddalore - Town', district: 'Cuddalore', state: 'Tamil Nadu', lat: 11.7560, lon: 79.7543 },
+    { id: 'DWLR_TN_035', name: 'Namakkal - KSR College', district: 'Namakkal', state: 'Tamil Nadu', lat: 11.3632, lon: 77.8282 }
   ];
 
   // Stations across all Indian states (city, district, state, coords)
