@@ -1,0 +1,331 @@
+Testing Prediction for Station: DWLR_001 (Station 1 - Bhopal)
+--- Forecast Result ---
+{
+  "stationId": "DWLR_001",
+  "forecastHorizon": "30 Days",
+  "trendClassification": "Rising",
+  "predictedLevelChange": "3.13 m",
+  "riskLevel": "Low Risk",
+  "alertTrigger": "No",
+  "confidenceScore": "3%",
+  "conservationRecommendation": "Suggested Action: Encourage storage and sustainable usage planning",
+  "predictedTimeSeries": [
+    {
+      "ts": "2026-02-14T00:00:00.000Z",
+      "level": 14.44,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-15T00:00:00.000Z",
+      "level": 14.46,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-16T00:00:00.000Z",
+      "level": 14.49,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-17T00:00:00.000Z",
+      "level": 14.51,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-18T00:00:00.000Z",
+      "level": 14.53,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-19T00:00:00.000Z",
+      "level": 14.55,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-20T00:00:00.000Z",
+      "level": 14.58,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-21T00:00:00.000Z",
+      "level": 14.6,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-22T00:00:00.000Z",
+      "level": 14.62,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-23T00:00:00.000Z",
+      "level": 14.64,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-24T00:00:00.000Z",
+      "level": 14.67,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-25T00:00:00.000Z",
+      "level": 14.69,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-26T00:00:00.000Z",
+      "level": 14.71,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-27T00:00:00.000Z",
+      "level": 14.73,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-28T00:00:00.000Z",
+      "level": 14.76,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-01T00:00:00.000Z",
+      "level": 14.78,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-02T00:00:00.000Z",
+      "level": 14.8,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-03T00:00:00.000Z",
+      "level": 14.82,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-04T00:00:00.000Z",
+      "level": 14.85,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-05T00:00:00.000Z",
+      "level": 14.87,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-06T00:00:00.000Z",
+      "level": 14.89,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-07T00:00:00.000Z",
+      "level": 14.91,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-08T00:00:00.000Z",
+      "level": 14.94,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-09T00:00:00.000Z",
+      "level": 14.96,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-10T00:00:00.000Z",
+      "level": 14.98,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-11T00:00:00.000Z",
+      "level": 15,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-12T00:00:00.000Z",
+      "level": 15.03,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-13T00:00:00.000Z",
+      "level": 15.05,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-14T00:00:00.000Z",
+      "level": 15.07,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-15T00:00:00.000Z",
+      "level": 15.09,
+      "type": "predicted"
+    }
+  ],
+  "systemNote": "Forecast Data — Experimental Overlay"
+}
+PASSED: Forecast structure seems correct.
+
+--- Simulation Scenario: Increased Pumping ---
+{
+  "stationId": "DWLR_001",
+  "forecastHorizon": "30 Days",
+  "trendClassification": "Rising",
+  "predictedLevelChange": "3.13 m",
+  "riskLevel": "Low Risk",
+  "alertTrigger": "No",
+  "confidenceScore": "3%",
+  "conservationRecommendation": "Suggested Action: Encourage storage and sustainable usage planning",
+  "predictedTimeSeries": [
+    {
+      "ts": "2026-02-14T00:00:00.000Z",
+      "level": 13.72,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-15T00:00:00.000Z",
+      "level": 13.74,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-16T00:00:00.000Z",
+      "level": 13.77,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-17T00:00:00.000Z",
+      "level": 13.78,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-18T00:00:00.000Z",
+      "level": 13.8,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-19T00:00:00.000Z",
+      "level": 13.82,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-20T00:00:00.000Z",
+      "level": 13.85,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-21T00:00:00.000Z",
+      "level": 13.87,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-22T00:00:00.000Z",
+      "level": 13.89,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-23T00:00:00.000Z",
+      "level": 13.91,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-24T00:00:00.000Z",
+      "level": 13.94,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-25T00:00:00.000Z",
+      "level": 13.96,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-26T00:00:00.000Z",
+      "level": 13.97,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-27T00:00:00.000Z",
+      "level": 13.99,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-02-28T00:00:00.000Z",
+      "level": 14.02,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-01T00:00:00.000Z",
+      "level": 14.04,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-02T00:00:00.000Z",
+      "level": 14.06,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-03T00:00:00.000Z",
+      "level": 14.08,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-04T00:00:00.000Z",
+      "level": 14.11,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-05T00:00:00.000Z",
+      "level": 14.13,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-06T00:00:00.000Z",
+      "level": 14.15,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-07T00:00:00.000Z",
+      "level": 14.16,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-08T00:00:00.000Z",
+      "level": 14.19,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-09T00:00:00.000Z",
+      "level": 14.21,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-10T00:00:00.000Z",
+      "level": 14.23,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-11T00:00:00.000Z",
+      "level": 14.25,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-12T00:00:00.000Z",
+      "level": 14.28,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-13T00:00:00.000Z",
+      "level": 14.3,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-14T00:00:00.000Z",
+      "level": 14.32,
+      "type": "predicted"
+    },
+    {
+      "ts": "2026-03-15T00:00:00.000Z",
+      "level": 14.34,
+      "type": "predicted"
+    }
+  ],
+  "systemNote": "Forecast Data — Experimental Overlay | Scenario: Increased Pumping Rate"
+}

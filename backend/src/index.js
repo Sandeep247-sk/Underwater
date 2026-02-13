@@ -8,6 +8,7 @@ import authRoutes from './routes/auth.js';
 import stationRoutes from './routes/stations.js';
 import ingestRoutes from './routes/ingest.js';
 import dashboardRoutes from './routes/dashboard.js';
+import predictionRoutes from './routes/prediction.js';
 import { errorHandler } from './middlewares/errorHandler.js';
 import { initializeDataStore } from './services/dataStore.js';
 
@@ -43,6 +44,7 @@ const apiRouter = express.Router();
 apiRouter.use('/auth', authRoutes);
 apiRouter.use('/stations', stationRoutes);
 apiRouter.use('/ingest', ingestRoutes);
+apiRouter.use('/prediction', predictionRoutes);
 apiRouter.use('/dashboard', dashboardRoutes);
 apiRouter.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
