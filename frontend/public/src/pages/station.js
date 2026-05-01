@@ -129,6 +129,15 @@ function runStationPage() {
                 critical: station.criticalThreshold
             } : null;
 
+            // Populate threshold info cards
+            if (thresholds) {
+                const thresholdSection = document.getElementById('thresholdSection');
+                if (thresholdSection) thresholdSection.style.display = 'block';
+                document.getElementById('thresholdNormal').textContent = `≥ ${thresholds.normal.toFixed(2)} m`;
+                document.getElementById('thresholdWarning').textContent = `${thresholds.critical.toFixed(2)} – ${thresholds.normal.toFixed(2)} m`;
+                document.getElementById('thresholdCritical').textContent = `< ${thresholds.critical.toFixed(2)} m`;
+            }
+
             if (!timeseriesChart) initChart(thresholds);
             loadTimeSeries(thresholds);
         } catch (error) {

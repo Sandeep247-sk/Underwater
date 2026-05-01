@@ -615,6 +615,26 @@ export function initializeDataStore() {
   moreTamilNaduStations.forEach(addStationWithReadings);
   allIndiaStations.forEach(addStationWithReadings);
 
+  // Force some stations to critical level for realistic dashboard data
+  const criticalStationIds = [
+    'DWLR_TN_015', 'DWLR_TN_029', 'DWLR_TN_TK1', 'DWLR_TN_RM1',
+    'DWLR_TN_GF06', 'DWLR_TN_DL06', 'DWLR_TN_BR08',
+    'DWLR_IN_KA_06', 'DWLR_IN_AP_05', 'DWLR_IN_TG_07',
+    'DWLR_IN_RJ_02', 'DWLR_IN_MH_05', 'DWLR_IN_KL_22',
+    'DWLR_IN_UP_03', 'DWLR_IN_BR_01'
+  ];
+  criticalStationIds.forEach(id => {
+    const station = stations.get(id);
+    if (!station) return;
+    const stationReadings = readings.get(id);
+    if (!stationReadings || stationReadings.length === 0) return;
+    // Set last 5 days of readings to critical levels
+    const critLevel = station.criticalThreshold;
+    for (let i = Math.max(0, stationReadings.length - 20); i < stationReadings.length; i++) {
+      stationReadings[i].level = parseFloat((critLevel * (0.5 + Math.random() * 0.45)).toFixed(2));
+    }
+  });
+
   console.log(`Initialized ${stations.size} stations with sample data`);
 }
 
@@ -848,4 +868,39 @@ export function getHighestWaterLevelByState() {
 
   // Convert to sorted array
   return Object.values(stateMaxMap).sort((a, b) => b.maxLevel - a.maxLevel);
+}
+
+// Get stations by status (normal, warning, critical)
+export function getStationsByStatus(targetStatus) {
+  const allStns = Array.from(stations.values());
+  const result = [];
+
+  allStns.forEach(station => {
+    const latest = getLatestReading(station.id);
+    if (!latest) return;
+    const status = classifyLevel(latest.level, station);
+    if (status === targetStatus) {
+      result.push({
+        id: station.id,
+        name: station.name,
+        state: station.state,
+        district: station.district,
+        lat: station.lat,
+        lon: station.lon,
+        latestLevel: parseFloat(latest.level.toFixed(2)),
+        normalThreshold: parseFloat(station.normalThreshold.toFixed(2)),
+        warningThreshold: parseFloat(station.warningThreshold.toFixed(2)),
+        criticalThreshold: parseFloat(station.criticalThreshold.toFixed(2)),
+        lastSeen: latest.ts
+      });
+    }
+  });
+
+  // Sort: critical by level asc, normal by level desc, warning by level asc
+  if (targetStatus === 'critical') {
+    result.sort((a, b) => a.latestLevel - b.latestLevel);
+  } else {
+    result.sort((a, b) => b.latestLevel - a.latestLevel);
+  }
+  return result;
 }

@@ -60,6 +60,42 @@
                     <div class="kpi-unit">stations</div>
                 </div>
             </div>
+
+            <div class="stations-list-section">
+                <h2>📋 Station Status Overview</h2>
+                <p class="section-subtitle">View all stations grouped by their current status — click a tab to switch</p>
+                <div class="status-tabs">
+                    <button class="status-tab active" data-status="critical">
+                        🔴 Critical <span class="tab-badge tab-badge--critical" id="tabCriticalCount">0</span>
+                    </button>
+                    <button class="status-tab" data-status="warning">
+                        🟡 Warning <span class="tab-badge tab-badge--warning" id="tabWarningCount">0</span>
+                    </button>
+                    <button class="status-tab" data-status="normal">
+                        🟢 Normal <span class="tab-badge tab-badge--normal" id="tabNormalCount">0</span>
+                    </button>
+                </div>
+                <div id="statusLoading" class="chart-loading">Loading stations...</div>
+                <div class="highest-levels-table-wrapper" id="statusWrapper" style="display: none;">
+                    <table class="highest-levels-table status-table" id="statusTable">
+                        <thead id="statusThead">
+                            <tr>
+                                <th>#</th>
+                                <th>Station</th>
+                                <th>State</th>
+                                <th>District</th>
+                                <th>Water Level</th>
+                                <th>Threshold</th>
+                                <th>Last Updated</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="statusBody">
+                        </tbody>
+                    </table>
+                </div>
+                <p id="statusEmpty" class="chart-empty" style="display: none;">No stations found for this status.</p>
+            </div>
         </div>
     </main>
 

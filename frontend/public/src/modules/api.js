@@ -89,5 +89,9 @@ export const api = {
 
     async getHighestLevelsByState() {
         return request('/stations/highest-levels-by-state');
+    },
+
+    async getStationsByStatus(status = 'critical') {
+        return request(`/dashboard/stations-by-status?status=${status}`);
     }
 };

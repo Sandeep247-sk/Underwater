@@ -57,6 +57,38 @@
                 </div>
                 <p id="chartEmpty" class="chart-empty" style="display: none;">No data for the selected range.</p>
             </div>
+
+            <div class="threshold-info-section" id="thresholdSection" style="display: none;">
+                <h2>Water Level Thresholds (Depth in Meters)</h2>
+                <p class="section-subtitle">At what depth level the station status changes — values specific to this station</p>
+                <div class="threshold-grid">
+                    <div class="threshold-card threshold-normal">
+                        <div class="threshold-indicator"></div>
+                        <div class="threshold-content">
+                            <h4>Normal Level</h4>
+                            <div class="threshold-value" id="thresholdNormal">--</div>
+                            <p class="threshold-desc">Above this depth → Status is <strong>Normal</strong></p>
+                        </div>
+                    </div>
+                    <div class="threshold-card threshold-warning">
+                        <div class="threshold-indicator"></div>
+                        <div class="threshold-content">
+                            <h4>Warning Level</h4>
+                            <div class="threshold-value" id="thresholdWarning">--</div>
+                            <p class="threshold-desc">Below normal but above this → Status is <strong>Warning</strong></p>
+                        </div>
+                    </div>
+                    <div class="threshold-card threshold-critical">
+                        <div class="threshold-indicator"></div>
+                        <div class="threshold-content">
+                            <h4>Critical Level</h4>
+                            <div class="threshold-value" id="thresholdCritical">--</div>
+                            <p class="threshold-desc">Below this depth → Status is <strong>Critical</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="metrics-grid">
                 <div class="metric-card">
                     <h3>Current Level</h3>
