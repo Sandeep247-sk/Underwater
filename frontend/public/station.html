@@ -75,6 +75,28 @@
                     <div class="metric-value" id="maxLevel">--</div>
                 </div>
             </div>
+
+            <div class="highest-levels-section">
+                <h2>Highest Water Point Level by State (India)</h2>
+                <p class="section-subtitle">Maximum recorded groundwater level for each state across all monitoring stations</p>
+                <div id="highestLevelsLoading" class="chart-loading">Loading state-wise data...</div>
+                <div class="highest-levels-table-wrapper" id="highestLevelsWrapper" style="display: none;">
+                    <table class="highest-levels-table" id="highestLevelsTable">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>State</th>
+                                <th>Highest Level</th>
+                                <th>Station</th>
+                                <th>District</th>
+                                <th>Recorded At</th>
+                            </tr>
+                        </thead>
+                        <tbody id="highestLevelsBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>

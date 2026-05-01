@@ -5,13 +5,24 @@ import {
   getStationById,
   getLatestReading,
   getTimeSeries,
-  classifyLevel
+  classifyLevel,
+  getHighestWaterLevelByState
 } from '../services/dataStore.js';
 
 const router = express.Router();
 
 // All routes require authentication
 router.use(authenticate);
+
+// GET /stations/highest-levels-by-state (must be before /:id)
+router.get('/highest-levels-by-state', (req, res, next) => {
+  try {
+    const data = getHighestWaterLevelByState();
+    res.json({ states: data });
+  } catch (err) {
+    next(err);
+  }
+});
 
 // GET /stations
 router.get('/', (req, res, next) => {

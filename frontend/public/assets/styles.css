@@ -353,6 +353,120 @@ body {
     color: var(--primary-color);
 }
 
+/* Highest Water Levels Section */
+.highest-levels-section {
+    margin-top: 2rem;
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.highest-levels-section h2 {
+    margin-bottom: 0.25rem;
+    color: var(--text-color);
+    font-size: 1.25rem;
+}
+
+.section-subtitle {
+    font-size: 0.875rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.25rem;
+}
+
+.highest-levels-table-wrapper {
+    overflow-x: auto;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.highest-levels-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.highest-levels-table thead {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: #ffffff;
+}
+
+.highest-levels-table th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.highest-levels-table td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+.highest-levels-table tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+.highest-levels-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.rank-cell {
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-align: center;
+    width: 40px;
+}
+
+.state-name {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.level-badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.level-normal {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.level-medium {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.level-high {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.station-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.station-link:hover {
+    text-decoration: underline;
+}
+
+.date-cell {
+    color: var(--secondary-color);
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .nav-container {
@@ -372,5 +486,14 @@ body {
     .chart-controls label {
         flex-direction: column;
         align-items: stretch;
+    }
+
+    .highest-levels-table {
+        font-size: 0.8rem;
+    }
+
+    .highest-levels-table th,
+    .highest-levels-table td {
+        padding: 0.5rem 0.6rem;
     }
 }

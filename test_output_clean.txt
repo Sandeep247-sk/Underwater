@@ -1,163 +1,163 @@
-Testing Prediction for Station: DWLR_001 (Station 1 - Bhopal)
+Testing Prediction for Station: DWLR_001 (Station 1 - Lucknow)
 --- Forecast Result ---
 {
   "stationId": "DWLR_001",
   "forecastHorizon": "30 Days",
-  "trendClassification": "Rising",
-  "predictedLevelChange": "3.13 m",
+  "trendClassification": "Stable",
+  "predictedLevelChange": "0.15 m",
   "riskLevel": "Low Risk",
   "alertTrigger": "No",
-  "confidenceScore": "3%",
-  "conservationRecommendation": "Suggested Action: Encourage storage and sustainable usage planning",
+  "confidenceScore": "6%",
+  "conservationRecommendation": "Suggested Action: Maintain regulated extraction, Continue monitoring recharge patterns",
   "predictedTimeSeries": [
     {
       "ts": "2026-02-14T00:00:00.000Z",
-      "level": 14.44,
+      "level": 18.43,
       "type": "predicted"
     },
     {
       "ts": "2026-02-15T00:00:00.000Z",
-      "level": 14.46,
+      "level": 18.4,
       "type": "predicted"
     },
     {
       "ts": "2026-02-16T00:00:00.000Z",
-      "level": 14.49,
+      "level": 18.36,
       "type": "predicted"
     },
     {
       "ts": "2026-02-17T00:00:00.000Z",
-      "level": 14.51,
+      "level": 18.33,
       "type": "predicted"
     },
     {
       "ts": "2026-02-18T00:00:00.000Z",
-      "level": 14.53,
+      "level": 18.3,
       "type": "predicted"
     },
     {
       "ts": "2026-02-19T00:00:00.000Z",
-      "level": 14.55,
+      "level": 18.26,
       "type": "predicted"
     },
     {
       "ts": "2026-02-20T00:00:00.000Z",
-      "level": 14.58,
+      "level": 18.23,
       "type": "predicted"
     },
     {
       "ts": "2026-02-21T00:00:00.000Z",
-      "level": 14.6,
+      "level": 18.19,
       "type": "predicted"
     },
     {
       "ts": "2026-02-22T00:00:00.000Z",
-      "level": 14.62,
+      "level": 18.16,
       "type": "predicted"
     },
     {
       "ts": "2026-02-23T00:00:00.000Z",
-      "level": 14.64,
+      "level": 18.13,
       "type": "predicted"
     },
     {
       "ts": "2026-02-24T00:00:00.000Z",
-      "level": 14.67,
+      "level": 18.09,
       "type": "predicted"
     },
     {
       "ts": "2026-02-25T00:00:00.000Z",
-      "level": 14.69,
+      "level": 18.06,
       "type": "predicted"
     },
     {
       "ts": "2026-02-26T00:00:00.000Z",
-      "level": 14.71,
+      "level": 18.02,
       "type": "predicted"
     },
     {
       "ts": "2026-02-27T00:00:00.000Z",
-      "level": 14.73,
+      "level": 17.99,
       "type": "predicted"
     },
     {
       "ts": "2026-02-28T00:00:00.000Z",
-      "level": 14.76,
+      "level": 17.95,
       "type": "predicted"
     },
     {
       "ts": "2026-03-01T00:00:00.000Z",
-      "level": 14.78,
+      "level": 17.92,
       "type": "predicted"
     },
     {
       "ts": "2026-03-02T00:00:00.000Z",
-      "level": 14.8,
+      "level": 17.89,
       "type": "predicted"
     },
     {
       "ts": "2026-03-03T00:00:00.000Z",
-      "level": 14.82,
+      "level": 17.85,
       "type": "predicted"
     },
     {
       "ts": "2026-03-04T00:00:00.000Z",
-      "level": 14.85,
+      "level": 17.82,
       "type": "predicted"
     },
     {
       "ts": "2026-03-05T00:00:00.000Z",
-      "level": 14.87,
+      "level": 17.78,
       "type": "predicted"
     },
     {
       "ts": "2026-03-06T00:00:00.000Z",
-      "level": 14.89,
+      "level": 17.75,
       "type": "predicted"
     },
     {
       "ts": "2026-03-07T00:00:00.000Z",
-      "level": 14.91,
+      "level": 17.72,
       "type": "predicted"
     },
     {
       "ts": "2026-03-08T00:00:00.000Z",
-      "level": 14.94,
+      "level": 17.68,
       "type": "predicted"
     },
     {
       "ts": "2026-03-09T00:00:00.000Z",
-      "level": 14.96,
+      "level": 17.65,
       "type": "predicted"
     },
     {
       "ts": "2026-03-10T00:00:00.000Z",
-      "level": 14.98,
+      "level": 17.61,
       "type": "predicted"
     },
     {
       "ts": "2026-03-11T00:00:00.000Z",
-      "level": 15,
+      "level": 17.58,
       "type": "predicted"
     },
     {
       "ts": "2026-03-12T00:00:00.000Z",
-      "level": 15.03,
+      "level": 17.54,
       "type": "predicted"
     },
     {
       "ts": "2026-03-13T00:00:00.000Z",
-      "level": 15.05,
+      "level": 17.51,
       "type": "predicted"
     },
     {
       "ts": "2026-03-14T00:00:00.000Z",
-      "level": 15.07,
+      "level": 17.48,
       "type": "predicted"
     },
     {
       "ts": "2026-03-15T00:00:00.000Z",
-      "level": 15.09,
+      "level": 17.44,
       "type": "predicted"
     }
   ],
@@ -169,161 +169,161 @@ PASSED: Forecast structure seems correct.
 {
   "stationId": "DWLR_001",
   "forecastHorizon": "30 Days",
-  "trendClassification": "Rising",
-  "predictedLevelChange": "3.13 m",
-  "riskLevel": "Low Risk",
+  "trendClassification": "Stable",
+  "predictedLevelChange": "0.15 m",
+  "riskLevel": "Moderate Risk",
   "alertTrigger": "No",
-  "confidenceScore": "3%",
-  "conservationRecommendation": "Suggested Action: Encourage storage and sustainable usage planning",
+  "confidenceScore": "6%",
+  "conservationRecommendation": "Suggested Action: Maintain regulated extraction, Continue monitoring recharge patterns",
   "predictedTimeSeries": [
     {
       "ts": "2026-02-14T00:00:00.000Z",
-      "level": 13.72,
+      "level": 17.51,
       "type": "predicted"
     },
     {
       "ts": "2026-02-15T00:00:00.000Z",
-      "level": 13.74,
+      "level": 17.48,
       "type": "predicted"
     },
     {
       "ts": "2026-02-16T00:00:00.000Z",
-      "level": 13.77,
+      "level": 17.44,
       "type": "predicted"
     },
     {
       "ts": "2026-02-17T00:00:00.000Z",
-      "level": 13.78,
+      "level": 17.41,
       "type": "predicted"
     },
     {
       "ts": "2026-02-18T00:00:00.000Z",
-      "level": 13.8,
+      "level": 17.39,
       "type": "predicted"
     },
     {
       "ts": "2026-02-19T00:00:00.000Z",
-      "level": 13.82,
+      "level": 17.35,
       "type": "predicted"
     },
     {
       "ts": "2026-02-20T00:00:00.000Z",
-      "level": 13.85,
+      "level": 17.32,
       "type": "predicted"
     },
     {
       "ts": "2026-02-21T00:00:00.000Z",
-      "level": 13.87,
+      "level": 17.28,
       "type": "predicted"
     },
     {
       "ts": "2026-02-22T00:00:00.000Z",
-      "level": 13.89,
+      "level": 17.25,
       "type": "predicted"
     },
     {
       "ts": "2026-02-23T00:00:00.000Z",
-      "level": 13.91,
+      "level": 17.22,
       "type": "predicted"
     },
     {
       "ts": "2026-02-24T00:00:00.000Z",
-      "level": 13.94,
+      "level": 17.19,
       "type": "predicted"
     },
     {
       "ts": "2026-02-25T00:00:00.000Z",
-      "level": 13.96,
+      "level": 17.16,
       "type": "predicted"
     },
     {
       "ts": "2026-02-26T00:00:00.000Z",
-      "level": 13.97,
+      "level": 17.12,
       "type": "predicted"
     },
     {
       "ts": "2026-02-27T00:00:00.000Z",
-      "level": 13.99,
+      "level": 17.09,
       "type": "predicted"
     },
     {
       "ts": "2026-02-28T00:00:00.000Z",
-      "level": 14.02,
+      "level": 17.05,
       "type": "predicted"
     },
     {
       "ts": "2026-03-01T00:00:00.000Z",
-      "level": 14.04,
+      "level": 17.02,
       "type": "predicted"
     },
     {
       "ts": "2026-03-02T00:00:00.000Z",
-      "level": 14.06,
+      "level": 17,
       "type": "predicted"
     },
     {
       "ts": "2026-03-03T00:00:00.000Z",
-      "level": 14.08,
+      "level": 16.96,
       "type": "predicted"
     },
     {
       "ts": "2026-03-04T00:00:00.000Z",
-      "level": 14.11,
+      "level": 16.93,
       "type": "predicted"
     },
     {
       "ts": "2026-03-05T00:00:00.000Z",
-      "level": 14.13,
+      "level": 16.89,
       "type": "predicted"
     },
     {
       "ts": "2026-03-06T00:00:00.000Z",
-      "level": 14.15,
+      "level": 16.86,
       "type": "predicted"
     },
     {
       "ts": "2026-03-07T00:00:00.000Z",
-      "level": 14.16,
+      "level": 16.83,
       "type": "predicted"
     },
     {
       "ts": "2026-03-08T00:00:00.000Z",
-      "level": 14.19,
+      "level": 16.8,
       "type": "predicted"
     },
     {
       "ts": "2026-03-09T00:00:00.000Z",
-      "level": 14.21,
+      "level": 16.77,
       "type": "predicted"
     },
     {
       "ts": "2026-03-10T00:00:00.000Z",
-      "level": 14.23,
+      "level": 16.73,
       "type": "predicted"
     },
     {
       "ts": "2026-03-11T00:00:00.000Z",
-      "level": 14.25,
+      "level": 16.7,
       "type": "predicted"
     },
     {
       "ts": "2026-03-12T00:00:00.000Z",
-      "level": 14.28,
+      "level": 16.66,
       "type": "predicted"
     },
     {
       "ts": "2026-03-13T00:00:00.000Z",
-      "level": 14.3,
+      "level": 16.63,
       "type": "predicted"
     },
     {
       "ts": "2026-03-14T00:00:00.000Z",
-      "level": 14.32,
+      "level": 16.61,
       "type": "predicted"
     },
     {
       "ts": "2026-03-15T00:00:00.000Z",
-      "level": 14.34,
+      "level": 16.57,
       "type": "predicted"
     }
   ],

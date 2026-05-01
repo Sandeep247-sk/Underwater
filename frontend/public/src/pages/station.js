@@ -228,5 +228,57 @@ function runStationPage() {
 
     document.getElementById('updateChart').addEventListener('click', () => loadTimeSeries());
 
+    // Load highest water levels by state
+    async function loadHighestLevels() {
+        const loadingEl = document.getElementById('highestLevelsLoading');
+        const wrapperEl = document.getElementById('highestLevelsWrapper');
+        const bodyEl = document.getElementById('highestLevelsBody');
+
+        try {
+            const response = await api.getHighestLevelsByState();
+            if (!response || !response.states || response.states.length === 0) {
+                if (loadingEl) loadingEl.textContent = 'No state-wise data available.';
+                return;
+            }
+
+            bodyEl.innerHTML = '';
+            response.states.forEach((entry, index) => {
+                const date = new Date(entry.recordedAt);
+                const dateStr = date.toLocaleDateString('en-IN', {
+                    year: 'numeric', month: 'short', day: 'numeric'
+                });
+
+                // Color-code the level value
+                let levelClass = 'level-normal';
+                if (entry.maxLevel > 22) levelClass = 'level-high';
+                else if (entry.maxLevel > 18) levelClass = 'level-medium';
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td class="rank-cell">${index + 1}</td>
+                    <td class="state-cell">
+                        <span class="state-name">${entry.state}</span>
+                    </td>
+                    <td class="level-cell">
+                        <span class="level-badge ${levelClass}">${entry.maxLevel.toFixed(2)} m</span>
+                    </td>
+                    <td class="station-cell">
+                        <a href="station.html?id=${entry.stationId}" class="station-link">${entry.stationName}</a>
+                    </td>
+                    <td>${entry.district}</td>
+                    <td class="date-cell">${dateStr}</td>
+                `;
+                bodyEl.appendChild(row);
+            });
+
+            if (loadingEl) loadingEl.style.display = 'none';
+            if (wrapperEl) wrapperEl.style.display = 'block';
+        } catch (error) {
+            console.error('Failed to load highest levels:', error);
+            if (loadingEl) loadingEl.textContent = 'Failed to load state-wise data.';
+        }
+    }
+
     loadStation();
+    loadHighestLevels();
 }

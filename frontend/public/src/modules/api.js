@@ -85,5 +85,9 @@ export const api = {
 
     async getDashboardSummary() {
         return request('/dashboard/summary');
+    },
+
+    async getHighestLevelsByState() {
+        return request('/stations/highest-levels-by-state');
     }
 };
